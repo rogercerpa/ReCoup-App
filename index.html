@@ -8,14 +8,19 @@
 
     <!-- favicon link -->
     <link rel='icon' href='assets/image/recoup-favicon.ico' type='image/x-icon'/ >
-    <!-- my css -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <!-- fontawesome cdn https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css -->
+<!--carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
+
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+<!-- master -->
     <!-- bulma-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
-
+    
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--  jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -32,6 +37,7 @@
     
 </head>
 <body>
+<!--  carousel -->
   <!--<video autoplay muted  loop id="bkgvideo">
     <source src="assets/video/background-video-home-page.mp4" type="video/mp4">
 
@@ -42,23 +48,47 @@
         <label id="recipe-name" class="label">Search</label>
         <div class="control">
           <input class="input is-rounded" type="text" placeholder="Search for a recipe...">
+
+
+  <video autoplay muted  loop id="bkgvideo">
+    <source src="assets/video/background-video-home-page.mp4" type="video/mp4">
+  </video>
+   <!-- recipe search form  -->
+    <form class="columns is-desktop is-vcentered  " >
+
+  <!-- <div class="column"></div> -->
+
+      <div class="column formstyle is-half is-offset-one-quarter">
+
+        <div>
+          <label id="site-name" class="column">ReCoup</label>
+<!--   master -->
         </div>
 
-        <label id="max-calories" class="label">Max Calories</label>
-        <div class="control">
-          <input class="input is-rounded" type="text" placeholder="Maximum Calories...">
+        <div class=" ">
+        <label id="recipe-name" class="column label">Search</label>
+        <input class="input is-rounded" type="text" placeholder="Search for a recipe...">
         </div>
 
-        <label id="cook time" class="label">Time To Cook</label>
-        <div class="control">
-          <input class="input is-rounded" type="text" placeholder="Maximum Time to Cook...">
+
+        <div class="">
+        <label id="max-calories" class=" column label">Max Calories</label>
+        <input class="input is-rounded" type="text" placeholder="Maximum Calories...">
         </div>
 
-        <div class="control">
+
+        <div class="">
+        <label id="cook time" class="column label">Time To Cook</label>
+        <input class="input is-rounded" type="text" placeholder="Maximum Time to Cook...">
+        </div>
+
+
+        <div class="">
           <button type="submit" class="button is-primary">Submit</button>
         </div>
-      </div>
+  </div>
 
+<!-- <div class="column"></div> -->
     </form>
 
     <div class="slick-carousel">
