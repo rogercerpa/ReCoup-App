@@ -18,3 +18,11 @@
 	grid-template-columns: 1fr 4fr;
 	color: tomato;
 }
+
+.recipes-list {
+	font-size: 50px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	padding: 20px;
+}
