@@ -11,6 +11,11 @@
 	min-width: 100%;
 	min-height: 100%;
 }
+/*  carousel */
+.carousel-image{
+	height:300px;
+	width: 300px !important;
+}
 
 .formstyle {
 	background-color: black;
