@@ -34,7 +34,7 @@ function getFoodDetail (recipeid) {
          //image
          newDiv.append($("<img>").attr("src", response[0].image ));
          //recipe title
-         newDiv.append($("<h3>").append(response[0].label));
+         newDiv.append($("<h2>").append(response[0].label));
          healthLabelsSpan=  $("<span>");
          //make small?
         var healthLabels = response[0].healthLabels;
