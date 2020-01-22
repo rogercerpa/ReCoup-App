@@ -24,9 +24,9 @@ $.ajax({
 	var ingredients5 = recipe.hits[4].recipe.ingredientLines;
 
 	//transfer content to HTML
-	$('#details1').text('ingredients: ' + ingredients1);
-	$('#details2').text('ingredients: ' + ingredients2);
-	$('#details3').text('ingredients: ' + ingredients3);
-	$('#details4').text('ingredients: ' + ingredients4);
-	$('#details5').text('ingredients: ' + ingredients5);
+	$('#results1').text('ingredients: ' + ingredients1);
+	$('#results2').text('ingredients: ' + ingredients2);
+	$('#results3').text('ingredients: ' + ingredients3);
+	$('#results4').text('ingredients: ' + ingredients4);
+	$('#results5').text('ingredients: ' + ingredients5);
 });
