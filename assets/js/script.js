@@ -1,3 +1,10 @@
+//  create-recipe-details-page
+$(button).on('click', function(event) {
+	event.preventDefault();
+
+	var recipeName = $('.recipe-input').val().trim();
+	localStorage.setItem(recipeName);
+});
 
 
 var carouselRecipes =  [{"name": "pizza", "id": "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c9bf37296a0126d18781c952dc45a230", "imageUrl": "https://www.edamam.com/web-img/9a8/9a87dd2cd93448b915b0199a2e2c646e.jpg"},
@@ -66,3 +73,4 @@ initialImages(carouselRecipes);
 
 
 $('.slick-carousel').slick();
+// master
