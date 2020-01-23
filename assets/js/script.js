@@ -19,7 +19,7 @@ function initialImages(recipeArr){
 
 
         var aTag = $("<a>");
-        aTag.attr("href", "recipe-detail.html?recipeId="+ carouselRecipes[i].id);
+        aTag.attr("href", "recipe-detail.html?recipeid="+ carouselRecipes[i].id);
         
         
         var newImg = $("<img>");

@@ -9,7 +9,7 @@ var urlParamsObj = getUrlParams(params);
 if (urlParamsObj["recipeid"]) {
     getFoodDetail(urlParamsObj["recipeid"]);
 }else{
-    getFoodDetail("recipeid=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_ce5a8f2f0ef46d8d83f8b13c731d3340");
+    getFoodDetail("http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_ce5a8f2f0ef46d8d83f8b13c731d3340");
 }
 
 //sample url url_to_this_page + recipeid=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_ce5a8f2f0ef46d8d83f8b13c731d3340
@@ -51,7 +51,7 @@ function getFoodDetail (recipeid) {
          newDiv.append(ingredientLinesEL);
 
          var caloriesEl = $("<div>");
-         caloriesEl.append("calories: " + response[0].calories)
+         caloriesEl.append("calories: " +Math.floor( response[0].calories))
          newDiv.append(caloriesEl);
 
          var prepTime = $("<div>");
