@@ -1,7 +1,20 @@
+var params = window.location.search;
+
+var urlParamsObj = getUrlParams(params);
+
+//assuming our href's in index.html are created with...
+// "/food-detail.html?food=" + selectedFood
+// var recipeName = $('#searchtext').val().trim();
+
+if (urlParamsObj['recipeName']) {
+	// recipeName = $('#recipe-name').val().trim();
+	urlParamsObj['recipeName'];
+}
+
+console.log(recipeName);
+
 var APIkey = 'f03e5bd493e26d665956a30800c9d16b';
 var APIid = '7b29bd33';
-var recipeName = 'pizza';
-//localStorage.getItem(recipeName);
 var queryURL =
 	'https://api.edamam.com/search?q=' +
 	recipeName +
