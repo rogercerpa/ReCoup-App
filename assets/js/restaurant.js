@@ -1,5 +1,18 @@
 var APIkey = 'aefad060561a909d5ec1befb1d62a02b';
 var query = '';
+// var queryURL =
+// 	'https://developers.zomato.com/api/v2.1/search?query=' +
+// 	recipeName +
+// 	'&app_id=' +
+// 	APIid +
+// 	'&app_key=' +
+// 	APIkey;
+
+// $.ajax({
+// 	url    : queryURL,
+// 	method : 'GET'
+// }).then(function(recipe) {}
+
 
 for (let i = 0; i < 10; i++) {
     var restaurantName = $("<div>");
