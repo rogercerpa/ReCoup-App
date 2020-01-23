@@ -77,8 +77,26 @@ var carouselRecipes = [
 ];
 
 var res;
+<<<<<<< HEAD
 function initialImages(recipeArr) {
 	var carouselEl = $('.slick-carousel');
+=======
+function initialImages(recipeArr){
+    var carouselEl = $(".slick-carousel");
+    
+    console.log(recipeArr)
+    for(var i =0;i< recipeArr.length;i++){
+
+
+        var aTag = $("<a>");
+        aTag.attr("href", "recipe-detail.html?recipeid="+ carouselRecipes[i].id);
+        
+        
+        var newImg = $("<img>");
+        newImg.attr("src", carouselRecipes[i].imageUrl);
+        newImg.attr("alt","broken-image");
+        newImg.addClass("carousel-image");
+>>>>>>> a2473129e76a0bf2ddc0fd1b5444d30fef315365
 
 	console.log(recipeArr);
 	for (var i = 0; i < recipeArr.length; i++) {
