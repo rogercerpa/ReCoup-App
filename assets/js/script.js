@@ -25,6 +25,7 @@ function initialImages(recipeArr){
         var newImg = $("<img>");
         newImg.attr("src", carouselRecipes[i].imageUrl);
         newImg.attr("alt","broken-image");
+        newImg.attr("height","200");
         newImg.addClass("carousel-image");
 
         aTag.append(newImg);
@@ -65,4 +66,10 @@ initialImages(carouselRecipes);
 // },12000);
 
 
-$('.slick-carousel').slick();
+$(".slick-carousel").slick({
+    centerMode:true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
