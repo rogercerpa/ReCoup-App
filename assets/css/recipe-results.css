@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.column {
+	background-color: black;
+	opacity: 0.8;
+	margin-top: 100px;
+	border-radius: 10px;
+	display: grid;
+	grid-gap: 10px;
+}
+
+.recipes-results {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	color: tomato;
+}
+
+.recipes-list {
+	font-size: 50px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	padding: 20px;
+}
