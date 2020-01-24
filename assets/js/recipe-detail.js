@@ -28,15 +28,15 @@ function getFoodDetail (recipeid) {
          restaurantSearch.click(function(){
             window.location.replace("restaurant.html?recipeName="+encodeURIComponent(response[0].label));
          });
-         restaurantSearch.addClass("button is-success")
+         restaurantSearch.addClass("button is-success is-pulled-right")
          newDiv.append(restaurantSearch);
 
 
          //recipe title
-         newDiv.append($("<div>").append(response[0].label).addClass("title is-1"));
+         newDiv.append($("<div>").append(response[0].label).addClass("title is-1 has-text-centered"));
 
          var caloriesEl = $("<div>");
-         caloriesEl.append("calories: " +Math.floor( response[0].calories))
+         caloriesEl.append("calories: " +Math.floor( response[0].calories));
          newDiv.append(caloriesEl);
 
          //don't show a cooktime if it doesn't exist!
@@ -81,7 +81,6 @@ function getFoodDetail (recipeid) {
          newDiv.append(originalArticle);
 
          $("#recipe-id").append(newDiv);
-         console.log(response);
      })
 
 }
