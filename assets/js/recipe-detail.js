@@ -33,16 +33,18 @@ function getFoodDetail (recipeid) {
 
 
          //recipe title
-         newDiv.append($("<div>").append(response[0].label).addClass("title is-1 has-text-centered"));
+         newDiv.append($("<div>").append(response[0].label).addClass("title is-1 has-text-centered has-tomato-color"));
 
          var caloriesEl = $("<div>");
          caloriesEl.append("calories: " +Math.floor( response[0].calories));
+         caloriesEl.addClass("has-tomato-color");
          newDiv.append(caloriesEl);
 
          //don't show a cooktime if it doesn't exist!
          if( response[0].totalTime!==0){
             var prepTime = $("<div>");
             prepTime.append("CookTime: "+ response[0].totalTime)
+            prepTime.addClass("has-tomato-color");
             newDiv.append(prepTime);
          }
 
@@ -58,7 +60,7 @@ function getFoodDetail (recipeid) {
          newDiv.append(healthLabelsSpan);
 
         //Ingredient List
-        newDiv.append($("<div>").append("Ingredient List: ").addClass("title is-3"));
+        newDiv.append($("<div>").append("Ingredient List: ").addClass("title is-3 has-tomato-color"));
          
 
 
@@ -78,6 +80,7 @@ function getFoodDetail (recipeid) {
          var originalArticleLink = $("<a>").attr("href", response[0].url);
          originalArticleLink.append( response[0].url);
          originalArticle.append("Original Article: ").append(originalArticleLink);
+         originalArticle.addClass("has-tomato-color")
          newDiv.append(originalArticle);
 
          $("#recipe-id").append(newDiv);
