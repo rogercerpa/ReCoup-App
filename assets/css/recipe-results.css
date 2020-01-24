@@ -6,7 +6,7 @@
 
 .column {
 	background-color: black;
-	opacity: 0.8;
+	opacity: 0.85;
 	margin-top: 100px;
 	border-radius: 10px;
 	display: grid;
@@ -19,6 +19,14 @@
 	color: tomato;
 }
 
+.recipe-name {
+	font-size: 30px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	padding: 20px;
+}
+
 .recipes-list {
 	font-size: 50px;
 	font-weight: bold;
@@ -28,4 +36,22 @@
 }
 .has-tomato-color{
 	color:tomato !important;
+}
+.has-black-background{
+	background-color: black;
+	border-radius: 10px;
+	margin-top: 100px;
+	opacity:.85;
+}
+
+.recipe-details-margin{
+	margin-left:10px;
+	margin-right:10px;
+
+}
+
+.recipe-detail-margin{
+	margin-top:100px;
+	margin-bottom:100px;
+	opacity: .85;
 }
