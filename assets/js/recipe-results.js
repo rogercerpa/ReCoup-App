@@ -58,6 +58,30 @@ $.ajax({
 	var name3 = recipe.hits[2].recipe.label;
 	var name4 = recipe.hits[3].recipe.label;
 	var name5 = recipe.hits[4].recipe.label;
+	// recipe ID
+	var recipeID1 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[0].recipe.uri);
+	var recipeID2 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[1].recipe.uri);
+	var recipeID3 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[2].recipe.uri);
+	var recipeID4 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[3].recipe.uri);
+	var recipeID5 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[4].recipe.uri);
+
+	//recipe ID
+	$('.image1-link').attr('href', recipeID1);
+	$('.image2-link').attr('href', recipeID2);
+	$('.image3-link').attr('href', recipeID3);
+	$('.image4-link').attr('href', recipeID4);
+	$('.image5-link').attr('href', recipeID5);
+
 	//transfer content to HTML
 	$('#results1').text('ingredients: ' + ingredients1);
 	$('#results2').text('ingredients: ' + ingredients2);
