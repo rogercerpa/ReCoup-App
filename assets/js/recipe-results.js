@@ -7,8 +7,7 @@ var urlParamsObj = getUrlParams(params);
 // var recipeName = $('#searchtext').val().trim();
 
 if (urlParamsObj['recipeName']) {
-	// recipeName = $('#recipe-name').val().trim();
-	urlParamsObj['recipeName'];
+	var recipeName = urlParamsObj['recipeName'];
 }
 
 console.log(recipeName);

@@ -4,11 +4,11 @@ $('button').on('click', function(event) {
 	console.log('hello');
 	// var recipeName = $('#searchtext').val().trim();
 	window.location.replace(
-		'recipe-results.html?recipeName=' + encodeURLComponent('#recipe-name')
+		'recipe-results.html?recipeName=' +
+			encodeURIComponent($('.recipe-input').val().trim())
 	);
-
-	// localStorage.setItem(recipeName);
 });
+//?recipeName=' + encodeURLComponent($('#recipe-name').val().trim())
 
 var carouselRecipes = [
 	{
@@ -77,26 +77,8 @@ var carouselRecipes = [
 ];
 
 var res;
-<<<<<<< HEAD
 function initialImages(recipeArr) {
 	var carouselEl = $('.slick-carousel');
-=======
-function initialImages(recipeArr){
-    var carouselEl = $(".slick-carousel");
-    
-    console.log(recipeArr)
-    for(var i =0;i< recipeArr.length;i++){
-
-
-        var aTag = $("<a>");
-        aTag.attr("href", "recipe-detail.html?recipeid="+ carouselRecipes[i].id);
-        
-        
-        var newImg = $("<img>");
-        newImg.attr("src", carouselRecipes[i].imageUrl);
-        newImg.attr("alt","broken-image");
-        newImg.addClass("carousel-image");
->>>>>>> a2473129e76a0bf2ddc0fd1b5444d30fef315365
 
 	console.log(recipeArr);
 	for (var i = 0; i < recipeArr.length; i++) {
