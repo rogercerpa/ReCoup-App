@@ -15,18 +15,33 @@ var query = '';
 
 
 for (let i = 0; i < 10; i++) {
-    var restaurantName = $("<div>");
-    var divWithinRestaurantName = $("<div>");
-    var divWithinRestaurantAddress = $("<div>");
-    var divWithinRestaurantPhoneNumber = $("<div>");
+    
+    var card = $("<div>");
+    card.addClass("card");
+
+    var cardContent = $("<div>");
+    cardContent.addClass("card-content");
+    card.append(cardContent);
+    
+    var content = $("<div>");
+    content.addClass("content");
+    cardContent.append(content);
+
+
+    // var card = $("<div>").addClass("card");
+    // var restaurantName = $("<div>").addClass("card-content");
+    // var divWithinRestaurantName = $("<div>");
+    // var divWithinRestaurantAddress = $("<div>");
+    // var divWithinRestaurantPhoneNumber = $("<div>");
     // restaurantName.append("blahahaha");
-    divWithinRestaurantName.append("Name: " + restaurantInfo.restaurants[i].restaurant.name);
-    divWithinRestaurantAddress.append("Address: " + restaurantInfo.restaurants[i].restaurant.location.address);
-    divWithinRestaurantPhoneNumber.append("Phone Number: " + restaurantInfo.restaurants[i].restaurant.phone_numbers);
+    // cardContent.append(card);
+    // cardContent.addClass("content");
+    content.append("Name: " + restaurantInfo.restaurants[i].restaurant.name);
+    content.append("Address: " + restaurantInfo.restaurants[i].restaurant.location.address);
+    content.append("Phone Number: " + restaurantInfo.restaurants[i].restaurant.phone_numbers);
     // restaurantName.append(restaurantInfo.restaurants[i].restaurant.name);
-    $("#nameAddressPhone").append(divWithinRestaurantName);
-    $("#nameAddressPhone").append(divWithinRestaurantAddress);
-    $("#nameAddressPhone").append(divWithinRestaurantPhoneNumber);
+    $(".cardroot").append(card);
+
     // console.log(divWithinRestaurantName);
     
     // $("#nameAddressPhone").append("Address " + restaurantInfo.restaurants[i].restaurant.location.address);
