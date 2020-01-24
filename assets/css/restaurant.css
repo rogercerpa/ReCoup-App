@@ -3,11 +3,22 @@
     opacity: 1;
 }
 
+.sansSerifFont {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
 .card {
-    opacity: 1;
+    opacity: 2;
 }
 
 .card-content {
     /* opacity: 0; */
     background-color: white;
+    opacity: 1;
 }
+
+.has-tomato-color{
+	color:tomato !important;
+}
+
