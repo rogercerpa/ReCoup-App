@@ -6,7 +6,7 @@
 
 .column {
 	background-color: black;
-	opacity: 0.8;
+	opacity: 0.85;
 	margin-top: 100px;
 	border-radius: 10px;
 	display: grid;
@@ -17,6 +17,14 @@
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	color: tomato;
+}
+
+.recipe-name {
+	font-size: 30px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	padding: 20px;
 }
 
 .recipes-list {

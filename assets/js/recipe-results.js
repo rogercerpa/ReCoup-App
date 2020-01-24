@@ -35,11 +35,11 @@ $.ajax({
 	var ingredients4 = recipe.hits[3].recipe.ingredientLines;
 	var ingredients5 = recipe.hits[4].recipe.ingredientLines;
 	//calories for those results
-	var calories1 = recipe.hits[0].recipe.calories;
-	var calories2 = recipe.hits[1].recipe.calories;
-	var calories3 = recipe.hits[2].recipe.calories;
-	var calories4 = recipe.hits[3].recipe.calories;
-	var calories5 = recipe.hits[4].recipe.calories;
+	var calories1 = recipe.hits[0].recipe.calories.toFixed(0);
+	var calories2 = recipe.hits[1].recipe.calories.toFixed(0);
+	var calories3 = recipe.hits[2].recipe.calories.toFixed(0);
+	var calories4 = recipe.hits[3].recipe.calories.toFixed(0);
+	var calories5 = recipe.hits[4].recipe.calories.toFixed(0);
 	//cooking time for those results
 	var cooktime1 = recipe.hits[0].recipe.totalTime;
 	var cooktime2 = recipe.hits[0].recipe.totalTime;
@@ -52,6 +52,35 @@ $.ajax({
 	var image3 = recipe.hits[2].recipe.image;
 	var image4 = recipe.hits[3].recipe.image;
 	var image5 = recipe.hits[4].recipe.image;
+	//recipe name
+	var name1 = recipe.hits[0].recipe.label;
+	var name2 = recipe.hits[1].recipe.label;
+	var name3 = recipe.hits[2].recipe.label;
+	var name4 = recipe.hits[3].recipe.label;
+	var name5 = recipe.hits[4].recipe.label;
+	// recipe ID
+	var recipeID1 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[0].recipe.uri);
+	var recipeID2 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[1].recipe.uri);
+	var recipeID3 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[2].recipe.uri);
+	var recipeID4 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[3].recipe.uri);
+	var recipeID5 =
+		'recipe-detail.html?recipeid=' +
+		encodeURIComponent(recipe.hits[4].recipe.uri);
+
+	//recipe ID
+	$('.image1-link').attr('href', recipeID1);
+	$('.image2-link').attr('href', recipeID2);
+	$('.image3-link').attr('href', recipeID3);
+	$('.image4-link').attr('href', recipeID4);
+	$('.image5-link').attr('href', recipeID5);
 
 	//transfer content to HTML
 	$('#results1').text('ingredients: ' + ingredients1);
@@ -61,23 +90,29 @@ $.ajax({
 	$('#results5').text('ingredients: ' + ingredients5);
 
 	//calories info
-	$('.recipe1-calories').text(calories1);
-	$('.recipe2-calories').text(calories2);
-	$('.recipe3-calories').text(calories3);
-	$('.recipe4-calories').text(calories4);
-	$('.recipe5-calories').text(calories5);
+	$('.recipe1-calories').text('Total Calories = ' + calories1);
+	$('.recipe2-calories').text('Total Calories = ' + calories2);
+	$('.recipe3-calories').text('Total Calories = ' + calories3);
+	$('.recipe4-calories').text('Total Calories = ' + calories4);
+	$('.recipe5-calories').text('Total Calories = ' + calories5);
 	//cooking time
-	$('.recipe1-cooktime').text(cooktime1);
-	$('.recipe2-cooktime').text(cooktime2);
-	$('.recipe3-cooktime').text(cooktime3);
-	$('.recipe4-cooktime').text(cooktime4);
-	$('.recipe5-cooktime').text(cooktime5);
+	$('.recipe1-cooktime').text('Cooking Time = ' + cooktime1);
+	$('.recipe2-cooktime').text('Cooking Time = ' + cooktime2);
+	$('.recipe3-cooktime').text('Cooking Time = ' + cooktime3);
+	$('.recipe4-cooktime').text('Cooking Time = ' + cooktime4);
+	$('.recipe5-cooktime').text('Cooking Time = ' + cooktime5);
 	// recipe image
 	$('#recipe1').attr('src', image1);
 	$('#recipe2').attr('src', image2);
 	$('#recipe3').attr('src', image3);
 	$('#recipe4').attr('src', image4);
 	$('#recipe5').attr('src', image5);
+	//recipe name
+	$('.recipe-name1').text(name1);
+	$('.recipe-name2').text(name2);
+	$('.recipe-name3').text(name3);
+	$('.recipe-name4').text(name4);
+	$('.recipe-name5').text(name5);
 });
 
 function getUrlParams(search) {

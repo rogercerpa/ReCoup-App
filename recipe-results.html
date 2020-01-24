@@ -8,15 +8,16 @@
 
     <!-- favicon link -->
     <link rel='icon' href='assets/image/recoup-favicon.ico' type='image/x-icon'/ >
-    <!-- fontawesome cdn https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css -->
-    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    
+
     <!-- bulma-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
-    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- my css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/recipe-results.css">
+
     <!--  jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -32,63 +33,117 @@
     
 </head>
 <body>
-
+<!-- background video -->
   <video autoplay muted  loop id="bkgvideo">
     <source src="assets/video/background-video-home-page.mp4" type="video/mp4">
   </video>
 
-  <section class="columns is-desktop is-vcentered">
+<!-- nav bar -->
 
-      <div class="column is-three-fifths is-offset-one-fifth">
+  
+<!-- <header class="container">
+    <nav class="nav">
 
-        <label class="recipes-list"> Recipe Results </label>
+      <div class="nav-left">
+        <a href="index.html" class="nav-item">
+          <h1 class="title is-4">ReCoup</h1>
+        </a>
+      </div>
 
-          <div class=" block recipes-results">
-            <img id="recipe1" src="">
-            <p id="results1"></p>
-            <div class="block">
+      <div class="nav-center">
+        <a href="https://github.com/rogercerpa/ReCoup-Project-1" target="_blank" class="nav-item"> 
+          <span class="icon">
+          <i class="fa fa-github"></i>
+          </span>
+        </a>
+      </div>
+
+      <div class="nav-right nav-menu is-active">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About Us</a>
+        <a href="#" class="nav-item">Contact</a>
+      </div>
+
+    </nav>
+</header> -->
+
+
+  <section class="container is-active">
+<!-- columns is-desktop is-vcentered -->
+
+          <!-- <div class="block">
+            <label class="recipes-list is-centered"> Recipe Results </label>
+          </div> -->
+
+      <div class="column">
+<!-- column is-three-fifths is-offset-one-fifth -->
+        <div class="block">
+          <label class="recipes-list"> Recipe Results </label>
+        </div>
+
+          <div class="columns recipes-results is-centered">
+            <div class=" box ">
+            <label for="" class=" recipe-name1"></label>
+            <a class="image1-link">
+              <img id="recipe1" src="">
+            </a>
             <span class="tag is-warning recipe1-calories"></span>
             <span class="tag is-warning recipe1-cooktime"></span>
+            <!-- <p class="" id="results1"></p> -->
             </div>
           </div>
 
-          <div class=" block recipes-results">
-            <img id="recipe2" src="">
-            <p id="results2"></p>
-            <div class="block">
+          <div class="columns recipes-results is-centered">
+            <div class="box">
+              <label for="" class="recipe-name2"></label>
+              <a class="image2-link">
+                <img id="recipe2" src="">
+              </a>
               <span class="tag is-warning recipe2-calories"></span>
               <span class="tag is-warning recipe2-cooktime"></span>
-              </div>
+              <!-- <p id="results2"></p> -->
+            </div>
           </div>
 
-          <div class=" block recipes-results">
-            <img id="recipe3" src="">
-            <p id="results3"></p>
-            <div class="block">
+          <div class="columns recipes-results is-centered">
+            <div class="box">
+              <label for="" class="recipe-name3"></label>
+              <a  class="image3-link"> 
+                <img id="recipe3" src="">
+              </a>
               <span class="tag is-warning recipe3-calories"></span>
               <span class="tag is-warning recipe3-cooktime"></span>
+              <!-- <p id="results3"></p> -->
               </div>
           </div>
 
-          <div class="block recipes-results">
-            <img id="recipe4" src="">
-            <p id="results4"></p>
-            <div class="block">
+          <div class="columns recipes-results is-centered">
+            <div class="box">
+              <a  class="image4-link">
+                <img id="recipe4" src="">
+              </a>
               <span class="tag is-warning recipe4-calories"></span>
               <span class="tag is-warning recipe4-cooktime"></span>
+              <label for="" class="recipe-name4"></label>
+              <!-- <p id="results4"></p> -->
               </div>
           </div>
 
-          <div class="block recipes-results">
-            <img id="recipe5" src="">
-            <p id="results5"></p>
-            <div class="block">
+          <div class="columns recipes-results is-centered">
+            <div class="box">
+              <label for="" class="recipe-name5"></label>
+              <a  class="image5-link"> 
+                <img id="recipe5" src="">
+              </a>
               <span class="tag is-warning recipe5-calories"></span>
               <span class="tag is-warning recipe5-cooktime"></span>
+              <!-- <p id="results5"></p> -->
               </div>
           </div>
 
       </div>
+
+    
 
   </section>
 
