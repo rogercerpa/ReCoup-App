@@ -1,32 +1,83 @@
 var APIkey = 'aefad060561a909d5ec1befb1d62a02b';
 var query = '';
-// var queryURL =
-// 	'https://developers.zomato.com/api/v2.1/search?query=' +
-// 	recipeName +
-// 	'&app_id=' +
-// 	APIid +
-// 	'&app_key=' +
-// 	APIkey;
+var recipeName = "";
 
-// $.ajax({
-// 	url    : queryURL,
-// 	method : 'GET'
-// }).then(function(recipe) {}
+// Copied from recipe-detail.js
+
+var params = window.location.search;
+
+var urlParamsObj = getUrlParams(params);
+
+//assuming our href's in index.html are created with...
+// "/food-detail.html?food=" + selectedFood
+console.log(urlParamsObj["recipeName"]);
+
+if (urlParamsObj["recipeName"]&& urlParamsObj["recipeName"] !== "") {
+    recipeName = urlParamsObj["recipeName"];
+}else{
+    recipeName = "pizza";
+}
+
+console.log(recipeName);
+
+var queryURL =
+	'https://developers.zomato.com/api/v2.1/search?query=' +
+	recipeName +
+	'&apikey=' +
+	APIkey;
+
+$.ajax({
+	url    : queryURL,
+	method : 'GET'
+}).then(function(recipe) {
+    for (let i = 0; i < 10; i++) {
+    
+        var card = $("<div>");
+        card.addClass("card");
+    
+        var cardContent = $("<div>");
+        cardContent.addClass("card-content");
+        card.append(cardContent);
+        
+        var content = $("<div>");
+        content.addClass("content");
+        cardContent.append(content);
+        
+        var restaurantSpan  = $("<span>");
+        restaurantSpan.addClass("is-size-5 has-text-weight-bold");
+        restaurantSpan.append("Name: ");
+        content.append(restaurantSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.name + "<br>");
+
+        var addressSpan  = $("<span>");
+        addressSpan.addClass("is-size-5 has-text-weight-bold");
+        addressSpan.append("Address: ");
+        content.append(addressSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.location.address + "<br>");
+
+        var phoneSpan  = $("<span>");
+        phoneSpan.addClass("is-size-5 has-text-weight-bold");
+        phoneSpan.append("Phone Number: ");
+        content.append(phoneSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.phone_numbers);
+    
+        // var card = $("<div>").addClass("card");
+        // var restaurantName = $("<div>").addClass("card-content");
+        // var divWithinRestaurantName = $("<div>");
+        // var divWithinRestaurantAddress = $("<div>");
+        // var divWithinRestaurantPhoneNumber = $("<div>");
+        // restaurantName.append("blahahaha");
+        // cardContent.append(card);
+        // cardContent.addClass("content");
+        
+        // restaurantName.append(restaurantInfo.restaurants[i].restaurant.name);
+        $(".cardroot").append(card);
+
+}
 
 
-for (let i = 0; i < 10; i++) {
-    var restaurantName = $("<div>");
-    var divWithinRestaurantName = $("<div>");
-    var divWithinRestaurantAddress = $("<div>");
-    var divWithinRestaurantPhoneNumber = $("<div>");
-    // restaurantName.append("blahahaha");
-    divWithinRestaurantName.append("Name: " + restaurantInfo.restaurants[i].restaurant.name);
-    divWithinRestaurantAddress.append("Address: " + restaurantInfo.restaurants[i].restaurant.location.address);
-    divWithinRestaurantPhoneNumber.append("Phone Number: " + restaurantInfo.restaurants[i].restaurant.phone_numbers);
-    // restaurantName.append(restaurantInfo.restaurants[i].restaurant.name);
-    $("#nameAddressPhone").append(divWithinRestaurantName);
-    $("#nameAddressPhone").append(divWithinRestaurantAddress);
-    $("#nameAddressPhone").append(divWithinRestaurantPhoneNumber);
+
+
     // console.log(divWithinRestaurantName);
     
     // $("#nameAddressPhone").append("Address " + restaurantInfo.restaurants[i].restaurant.location.address);
@@ -36,4 +87,14 @@ for (let i = 0; i < 10; i++) {
     // name.append(restaurantInfo.restaurants[i].name);
 
 
+})
+
+function getUrlParams(search) {
+    const hashes = search.slice(search.indexOf('?') + 1).split('&')
+    const params = {}
+    hashes.map(hash => {
+        const [key, val] = hash.split('=')
+        params[key] = decodeURIComponent(val)
+    })
+    return params
 }

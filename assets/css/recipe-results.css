@@ -34,3 +34,6 @@
 	text-align: center;
 	padding: 20px;
 }
+.has-tomato-color{
+	color:tomato !important;
+}
