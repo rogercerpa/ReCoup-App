@@ -11,15 +11,16 @@
 	min-width: 100%;
 	min-height: 100%;
 }
+
 /*  carousel */
-.carousel-image{
-	height:300px;
+.carousel-image {
+	height: 300px;
 	width: 300px !important;
 }
 
 .formstyle {
 	background-color: black;
-	opacity: 0.5;
+	opacity: 0.85;
 	margin-top: 100px;
 	border-radius: 10px;
 	/* width: 500px; */
@@ -27,6 +28,13 @@
 
 #site-name {
 	font-size: 50px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+}
+
+#site-subname {
+	font-size: 20px;
 	font-weight: bold;
 	color: tomato;
 	text-align: center;
