@@ -24,15 +24,31 @@ function getFoodDetail (recipeid) {
 
          //button to find restaurants
          var restaurantSearch = $("<button>");
-         restaurantSearch.append("Search For Restaurant");
+         restaurantSearch.append("Search For a restaurant with this recipe title");
          restaurantSearch.click(function(){
             window.location.replace("restaurant.html?recipeName="+encodeURIComponent(response[0].label));
          });
+         restaurantSearch.addClass("button is-success is-pulled-right")
          newDiv.append(restaurantSearch);
 
 
          //recipe title
-         newDiv.append($("<div>").append(response[0].label).addClass("title is-1"));
+         newDiv.append($("<div>").append(response[0].label).addClass("title is-1 has-text-centered has-tomato-color"));
+
+         var caloriesEl = $("<div>");
+         caloriesEl.append("calories: " +Math.floor( response[0].calories));
+         caloriesEl.addClass("has-tomato-color");
+         newDiv.append(caloriesEl);
+
+         //don't show a cooktime if it doesn't exist!
+         if( response[0].totalTime!==0){
+            var prepTime = $("<div>");
+            prepTime.append("CookTime: "+ response[0].totalTime)
+            prepTime.addClass("has-tomato-color");
+            newDiv.append(prepTime);
+         }
+
+
          healthLabelsSpan=  $("<span>");
          //make small?
         //example tag :<span class="tag is-danger">Super danger</span>
@@ -40,7 +56,15 @@ function getFoodDetail (recipeid) {
          healthLabels.forEach((label) => {
             healthLabelsSpan.append("<span class=\"tag is-danger\">"+label+"</span>");
          })
+
          newDiv.append(healthLabelsSpan);
+
+        //Ingredient List
+        newDiv.append($("<div>").append("Ingredient List: ").addClass("title is-3 has-tomato-color"));
+         
+
+
+
          ingredientLines = response[0].ingredientLines;
          var ingredientLinesEL = $("<div>").addClass("list");
          ingredientLines.forEach((line)=>{
@@ -50,25 +74,16 @@ function getFoodDetail (recipeid) {
          });
          newDiv.append(ingredientLinesEL);
 
-         var caloriesEl = $("<div>");
-         caloriesEl.append("calories: " +Math.floor( response[0].calories))
-         newDiv.append(caloriesEl);
 
-         var prepTime = $("<div>");
-         prepTime.append("CookTime: "+ response[0].totalTime)
-         newDiv.append(prepTime);
 
          var originalArticle = $("<div>");
          var originalArticleLink = $("<a>").attr("href", response[0].url);
          originalArticleLink.append( response[0].url);
          originalArticle.append("Original Article: ").append(originalArticleLink);
+         originalArticle.addClass("has-tomato-color")
          newDiv.append(originalArticle);
 
-
-
-
          $("#recipe-id").append(newDiv);
-         console.log(response);
      })
 
 }

@@ -80,15 +80,18 @@ var res;
 function initialImages(recipeArr) {
 	var carouselEl = $('.slick-carousel');
 
+
 	console.log(recipeArr);
 	for (var i = 0; i < recipeArr.length; i++) {
-		var aTag = $('<a>');
-		aTag.attr('href', 'recipe-detail.html?id=' + carouselRecipes[i].id);
+    var aTag = $("<a>");
+    aTag.attr("href", "recipe-detail.html?recipeid="+ carouselRecipes[i].id);
 
-		var newImg = $('<img>');
-		newImg.attr('src', carouselRecipes[i].imageUrl);
-		newImg.attr('alt', 'broken-image');
-		newImg.addClass('carousel-image');
+
+    var newImg = $("<img>");
+    newImg.attr("src", carouselRecipes[i].imageUrl);
+    newImg.attr("alt","broken-image");
+    newImg.attr("height","200");
+    newImg.addClass("carousel-image");
 
 		aTag.append(newImg);
 
@@ -124,5 +127,11 @@ initialImages(carouselRecipes);
 //     index++;
 // },12000);
 
-$('.slick-carousel').slick();
-// master
+$(".slick-carousel").slick({
+    centerMode:true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
