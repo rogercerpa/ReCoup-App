@@ -19,6 +19,14 @@
 	color: tomato;
 }
 
+.recipe-name {
+	font-size: 30px;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	padding: 20px;
+}
+
 .recipes-list {
 	font-size: 50px;
 	font-weight: bold;
