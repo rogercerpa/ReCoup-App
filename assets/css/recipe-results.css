@@ -37,3 +37,21 @@
 .has-tomato-color{
 	color:tomato !important;
 }
+.has-black-background{
+	background-color: black;
+	border-radius: 10px;
+	margin-top: 100px;
+	opacity:.85;
+}
+
+.recipe-details-margin{
+	margin-left:10px;
+	margin-right:10px;
+
+}
+
+.recipe-detail-margin{
+	margin-top:100px;
+	margin-bottom:100px;
+	opacity: .85;
+}
