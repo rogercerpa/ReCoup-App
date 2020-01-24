@@ -19,11 +19,13 @@
 
 .formstyle {
 	background-color: black;
-	opacity: 0.5;
+	opacity: 0.9;
 	margin-top: 100px;
 	border-radius: 10px;
 	/* width: 500px; */
 }
+
+
 
 #site-name {
 	font-size: 50px;

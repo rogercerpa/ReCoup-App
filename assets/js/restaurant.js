@@ -42,7 +42,24 @@ $.ajax({
         var content = $("<div>");
         content.addClass("content");
         cardContent.append(content);
-    
+        
+        var restaurantSpan  = $("<span>");
+        restaurantSpan.addClass("is-size-5 has-text-weight-bold");
+        restaurantSpan.append("Name: ");
+        content.append(restaurantSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.name + "<br>");
+
+        var addressSpan  = $("<span>");
+        addressSpan.addClass("is-size-5 has-text-weight-bold");
+        addressSpan.append("Address: ");
+        content.append(addressSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.location.address + "<br>");
+
+        var phoneSpan  = $("<span>");
+        phoneSpan.addClass("is-size-5 has-text-weight-bold");
+        phoneSpan.append("Phone Number: ");
+        content.append(phoneSpan);
+        content.append(restaurantInfo.restaurants[i].restaurant.phone_numbers);
     
         // var card = $("<div>").addClass("card");
         // var restaurantName = $("<div>").addClass("card-content");
@@ -52,9 +69,7 @@ $.ajax({
         // restaurantName.append("blahahaha");
         // cardContent.append(card);
         // cardContent.addClass("content");
-        content.append("Name: " + restaurantInfo.restaurants[i].restaurant.name + "<br>");
-        content.append("Address: " + restaurantInfo.restaurants[i].restaurant.location.address + "<br>");
-        content.append("Phone Number: " + restaurantInfo.restaurants[i].restaurant.phone_numbers);
+        
         // restaurantName.append(restaurantInfo.restaurants[i].restaurant.name);
         $(".cardroot").append(card);
 
