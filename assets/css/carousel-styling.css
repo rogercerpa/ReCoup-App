@@ -42,3 +42,9 @@ html, body {
   .slick-prev, .slick-next {
     z-index: 1000;
   }
+
+
+  .slick-track{
+    margin-top: 10px;
+    margin-bottom:10px;
+  }
