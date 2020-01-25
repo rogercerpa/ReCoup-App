@@ -4,54 +4,61 @@
 	padding: 0;
 }
 
-.column {
+.columns {
 	background-color: black;
 	opacity: 0.85;
 	margin-top: 100px;
 	border-radius: 10px;
-	display: grid;
-	grid-gap: 10px;
 }
 
 .recipes-results {
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	color: tomato;
+	float: left;
 }
 
 .recipe-name {
-	font-size: 30px;
+	font-size: 12px;
 	font-weight: bold;
 	color: tomato;
 	text-align: center;
-	padding: 20px;
+	margin: 5px;
 }
 
 .recipes-list {
+	background-color: black;
+	opacity: .85;
 	font-size: 50px;
 	font-weight: bold;
 	color: tomato;
 	text-align: center;
-	padding: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
 }
-.has-tomato-color{
-	color:tomato !important;
+.has-tomato-color {
+	color: tomato !important;
 }
-.has-black-background{
+.has-black-background {
 	background-color: black;
 	border-radius: 10px;
 	margin-top: 100px;
-	opacity:.85;
-}
-
-.recipe-details-margin{
-	margin-left:10px;
-	margin-right:10px;
-
-}
-
-.recipe-detail-margin{
-	margin-top:100px;
-	margin-bottom:100px;
 	opacity: .85;
+}
+
+.recipe-details-margin {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.recipe-detail-margin {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	opacity: .85;
+}
+
+@media (max-width: 700px) {
+	body {
+		background-image: url("/assets/image/ReCoup-Logo.png");
+	}
 }
