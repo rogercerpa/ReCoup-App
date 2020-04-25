@@ -15,7 +15,7 @@ Recoup will also provide you with a list of suggestions to restaurants that serv
 
 
 
-## API’s and technologies used:
+## Technologies:
 
 * HTML
 
@@ -25,13 +25,13 @@ Recoup will also provide you with a list of suggestions to restaurants that serv
 
 * Slick js
 
-## API/Resources
+## API/Resources:
 
 * Zomato API
 
 * Edamam API
 
-## Collaborations 
+## Collaborations:
 
 - Scotty Mikul
     * Github - https://github.com/ScottMikul
