@@ -35,9 +35,9 @@ Recoup will also provide you with a list of suggestions to restaurants that serv
 
 - Scotty Mikul
     * Github - https://github.com/ScottMikul
--Austin Smith
+- Austin Smith
     * GitHub - https://github.com/Austin-Smith-999
--Roger Cerpa
+- Roger Cerpa
     * Github - https://github.com/rogercerpa
 
 
